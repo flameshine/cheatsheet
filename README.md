@@ -2,9 +2,15 @@
 
 <h2>Table of contents</h2>
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+1. [Unix](#Unix)
+2. [Git](#Git)
+3. [SVN](#SVN)
+4. [Docker](#Docker)
+5. [AWS](#AWS)
+6. [Kubernetes](#Kubernetes)
+7. [PostgreSQL](#PostgreSQL)
 
-<h2>Auxiliary helpful commands</h2>
+<h2>Unix</h2>
 
 Grant permission to a file:
 
@@ -34,12 +40,6 @@ Grep all '.gz' files in directory:
 
 ```
 find . -name \*.gz -print0 | xargs -0 zgrep "<pattern>"
-```
-
-Define a format for SVN-versioned file:
-
-```
-svn propset svn:mime-type <format> <path>
 ```
 
 <h2>Git</h2>
@@ -84,6 +84,44 @@ Get latest revision before the new branch was created:
 svn log --stop-on-copy --verbose --limit 1 -r0:HEAD <branch-link>
 ```
 
+Define a format a file:
+
+```
+svn propset svn:mime-type <format> <path>
+```
+
+<h2>AWS</h2>
+
+Synthetize CDK changes:
+
+```
+aws2-wrap --profile <profile> cdk synth
+```
+
+Deploy CDK changes:
+
+```
+aws2-wrap --profile <profile> cdk deploy
+```
+
+Destroy CDK changes:
+
+```
+aws2-wrap --profile <profile> cdk destroy
+```
+
+Login into ECR:
+
+```
+aws2-wrap --profile <profile> aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR address>
+```
+
+Update EKS cluster config:
+
+```
+aws eks update-kubeconfig --profile <profile> --region us-east-1 --name <name>
+```
+
 <h2>Docker</h2>
 
 List all images:
@@ -120,38 +158,6 @@ Push an image:
 
 ```
 docker push <name/id>
-```
-
-<h2>AWS</h2>
-
-Synthetize CDK changes:
-
-```
-aws2-wrap --profile <profile> cdk synth
-```
-
-Deploy CDK changes:
-
-```
-aws2-wrap --profile <profile> cdk deploy
-```
-
-Destroy CDK changes:
-
-```
-aws2-wrap --profile <profile> cdk destroy
-```
-
-Login into ECR:
-
-```
-aws2-wrap --profile <profile> aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR address>
-```
-
-Update EKS cluster config:
-
-```
-aws eks update-kubeconfig --profile <profile> --region us-east-1 --name <name>
 ```
 
 <h2>Kubernetes</h2>

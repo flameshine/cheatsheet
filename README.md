@@ -2,6 +2,8 @@
 
 <h2>Table of contents</h2>
 
+__TOC__
+
 <h2>Auxiliary helpful commands</h2>
 
 Grant permission to a file:
@@ -165,8 +167,6 @@ Connect to a certain namespace of the cluster:
 ```
 kcon <cluster> <namespace>
 ```
-
-* 'kc' is the alias for 'kubectl'
 
 List all resource types:
 

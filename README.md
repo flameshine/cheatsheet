@@ -2,13 +2,13 @@
 
 <h2>Table of contents</h2>
 
-1. [Unix](#Unix)
-2. [Git](#Git)
-3. [SVN](#SVN)
-4. [Docker](#Docker)
-5. [AWS](#AWS)
-6. [Kubernetes](#Kubernetes)
-7. [PostgreSQL](#PostgreSQL)
+* [Unix](#Unix)
+* [Git](#Git)
+* [SVN](#SVN)
+* [Docker](#Docker)
+* [AWS](#AWS)
+* [Kubernetes](#Kubernetes)
+* [PostgreSQL](#PostgreSQL)
 
 <h2>Unix</h2>
 
@@ -246,7 +246,7 @@ View the exact yaml of some Kubernetes component:
 kc get <resource> <name> -o yaml | less
 ```
 
-<h2>PostreSQL</h2>
+<h2>PostgreSQL</h2>
 
 Initialize a database:
 

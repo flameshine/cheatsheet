@@ -2,7 +2,7 @@
 
 <h2>Table of contents</h2>
 
-__TOC__
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 <h2>Auxiliary helpful commands</h2>
 

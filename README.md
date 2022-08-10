@@ -1,8 +1,8 @@
 # cheatsheet
 
-<h2>Table of contents<h2>
+<h2>Table of contents</h2>
 
-<h2>Auxiliary helpful commands<h2>
+<h2>Auxiliary helpful commands</h2>
 
 Grant permission to a file:
 
@@ -40,7 +40,7 @@ Define a format for SVN-versioned file:
 svn propset svn:mime-type <format> <path>
 ```
 
-<h2>Git<h2>
+<h2>Git</h2>
 
 Remove all unpushed commits:
 
@@ -74,7 +74,7 @@ git checkout <branch>
 git stash pop
 ```
 
-<h2>SVN<h2>
+<h2>SVN</h2>
 
 Get latest revision before the new branch was created:
 
@@ -82,7 +82,7 @@ Get latest revision before the new branch was created:
 svn log --stop-on-copy --verbose --limit 1 -r0:HEAD <branch-link>
 ```
 
-<h2>Docker<h2>
+<h2>Docker</h2>
 
 List all images:
 
@@ -120,7 +120,7 @@ Push an image:
 docker push <name/id>
 ```
 
-<h2>AWS<h2>
+<h2>AWS</h2>
 
 Synthetize CDK changes:
 
@@ -152,7 +152,7 @@ Update EKS cluster config:
 aws eks update-kubeconfig --profile <profile> --region us-east-1 --name <name>
 ```
 
-<h2>Kubernetes<h2>
+<h2>Kubernetes</h2>
 
 Connect to the cluster:
 
@@ -240,7 +240,7 @@ View the exact yaml of some Kubernetes component:
 kc get <resource> <name> -o yaml | less
 ```
 
-<h2>PostreSQL<h2>
+<h2>PostreSQL</h2>
 
 Initialize a database:
 

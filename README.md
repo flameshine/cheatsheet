@@ -1,4 +1,4 @@
-# cheatsheet
+# Cheatsheet
 
 <h2>Table of contents</h2>
 

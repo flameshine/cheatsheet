@@ -50,6 +50,12 @@ Remove all unpushed commits:
 git reset --hard origin
 ```
 
+Reword last commit message:
+
+```
+git commit --amend -m "<message>"
+```
+
 Squash all commits on a branch:
 
 ```

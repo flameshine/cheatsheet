@@ -180,7 +180,7 @@ Connect to a certain namespace of the cluster:
 kcon <cluster> <namespace>
 ```
 
-List all resource types:
+List resource types:
 
 ```
 kc get <resource type>

@@ -42,6 +42,24 @@ Grep all '.gz' files in directory:
 find . -name \*.gz -print0 | xargs -0 zgrep "<pattern>"
 ```
 
+Generate a random string:
+
+```
+< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c32
+```
+
+Encode a string with Base64:
+
+```
+openssl base64 -e <<< "<string>"
+```
+
+Decode a string with Base64:
+
+```
+openssl base64 -d <<< "<string>"
+```
+
 <h2>Git</h2>
 
 Remove all unpushed commits:

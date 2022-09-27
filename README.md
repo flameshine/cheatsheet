@@ -270,6 +270,12 @@ View the exact yaml of some Kubernetes component:
 kc get <resource> <name> -o yaml | less
 ```
 
+Apply the corresponding action to each listed pod:
+
+```
+kc -n <namespace> get pods | awk '{print $1}' | grep "<pattern>" | xargs kubectl -n <namespace> <action> pod
+```
+
 <h2>PostgreSQL</h2>
 
 Initialize a database:

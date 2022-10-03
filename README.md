@@ -21,6 +21,12 @@ sudo chmod 775 <target>
 Change group permission of a file:
 
 ```
+sudo chown <user>:contractors <target>
+```
+
+Kill a process on particular port:
+
+```
 sudo kill -9 $(lsof -t -i:<port>)
 ```
 

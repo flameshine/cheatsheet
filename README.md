@@ -12,7 +12,7 @@
 
 <h2>Unix</h2>
 
-Grant permission to a file:
+Grant read/write/execute permissions to a file:
 
 ```
 sudo chmod 775 <target>

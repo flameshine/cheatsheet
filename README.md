@@ -8,7 +8,6 @@
 * [Docker](#Docker)
 * [AWS](#AWS)
 * [Kubernetes](#Kubernetes)
-* [PostgreSQL](#PostgreSQL)
 
 <h2>Unix</h2>
 
@@ -287,60 +286,4 @@ Apply the corresponding action to each listed pod:
 
 ```
 kc -n <namespace> get pods | awk '{print $1}' | grep "<pattern>" | xargs kubectl -n <namespace> <action> pod
-```
-
-<h2>PostgreSQL</h2>
-
-Initialize a database:
-
-```
-service postgresql initdb
-```
-
-Start server:
-
-```
-service postgresql start
-```
-
-Stop server:
-
-```
-service postgresql stop
-```
-
-Restart server:
-
-```
-service postgresql restart
-```
-
-Go to the server's terminal:
-
-```
-sudo -u postgres psql
-```
-
-List all databases:
-
-```
-postgres-# \list
-```
-
-Connect to a database:
-
-```
-postgres-# \connect <name>
-```
-
-List all tables in database:
-
-```
-<name>=# \dt
-```
-
-Exit from a database:
-
-```
-<name>=# \q
 ```

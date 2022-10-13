@@ -65,6 +65,12 @@ Decode a string with Base64:
 openssl base64 -d <<< "<string>"
 ```
 
+Get your IP address:
+
+```
+ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'
+```
+
 <h2>Kubernetes</h2>
 
 Connect to the cluster:

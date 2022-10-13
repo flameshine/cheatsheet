@@ -3,11 +3,11 @@
 <h2>Table of contents</h2>
 
 * [Unix](#Unix)
-* [Git](#Git)
-* [SVN](#SVN)
+* [Kubernetes](#Kubernetes)
 * [Docker](#Docker)
 * [AWS](#AWS)
-* [Kubernetes](#Kubernetes)
+* [Git](#Git)
+* [SVN](#SVN)
 
 <h2>Unix</h2>
 
@@ -63,130 +63,6 @@ Decode a string with Base64:
 
 ```
 openssl base64 -d <<< "<string>"
-```
-
-<h2>Git</h2>
-
-Remove all unpushed commits:
-
-```
-git reset --hard origin
-```
-
-Reword last commit message:
-
-```
-git commit --amend -m "<message>"
-```
-
-Squash all commits on a branch:
-
-```
-git checkout <branch>
-
-git reset $(git merge-base master $(git branch --show-current))
-
-git add -A
-
-git commit -m <message>
-
-git push --force
-```
-
-Move unpushed commit from one branch to another:
-
-```
-git reset HEAD~1
-
-git stash
-
-git checkout <branch>
-
-git stash pop
-```
-
-<h2>SVN</h2>
-
-Get latest revision before the new branch was created:
-
-```
-svn log --stop-on-copy --verbose --limit 1 -r0:HEAD <branch-link>
-```
-
-Define a format a file:
-
-```
-svn propset svn:mime-type <format> <path>
-```
-
-<h2>AWS</h2>
-
-Synthetize CDK changes:
-
-```
-aws2-wrap --profile <profile> cdk synth
-```
-
-Deploy CDK changes:
-
-```
-aws2-wrap --profile <profile> cdk deploy
-```
-
-Destroy CDK changes:
-
-```
-aws2-wrap --profile <profile> cdk destroy
-```
-
-Login into ECR:
-
-```
-aws2-wrap --profile <profile> aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR address>
-```
-
-Update EKS cluster config:
-
-```
-aws eks update-kubeconfig --profile <profile> --region us-east-1 --name <name>
-```
-
-<h2>Docker</h2>
-
-List all images:
-
-```
-docker images
-```
-
-Remove an image:
-
-```
-docker image rm <name/id>
-```
-
-List all containers:
-
-```
-docker ps -a
-```
-
-Remove a container:
-
-```
-docker container rm <name/id>
-```
-
-Build an image:
-
-```
-docker build (-t <tag>) <path>
-```
-
-Push an image:
-
-```
-docker push <name/id>
 ```
 
 <h2>Kubernetes</h2>
@@ -286,4 +162,128 @@ Apply the corresponding action to each listed pod:
 
 ```
 kc -n <namespace> get pods | awk '{print $1}' | grep "<pattern>" | xargs kubectl -n <namespace> <action> pod
+```
+
+<h2>AWS</h2>
+
+Synthetize CDK changes:
+
+```
+aws2-wrap --profile <profile> cdk synth
+```
+
+Deploy CDK changes:
+
+```
+aws2-wrap --profile <profile> cdk deploy
+```
+
+Destroy CDK changes:
+
+```
+aws2-wrap --profile <profile> cdk destroy
+```
+
+Login into ECR:
+
+```
+aws2-wrap --profile <profile> aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR address>
+```
+
+Update EKS cluster config:
+
+```
+aws eks update-kubeconfig --profile <profile> --region us-east-1 --name <name>
+```
+
+<h2>Docker</h2>
+
+List all images:
+
+```
+docker images
+```
+
+Remove an image:
+
+```
+docker image rm <name/id>
+```
+
+List all containers:
+
+```
+docker ps -a
+```
+
+Remove a container:
+
+```
+docker container rm <name/id>
+```
+
+Build an image:
+
+```
+docker build (-t <tag>) <path>
+```
+
+Push an image:
+
+```
+docker push <name/id>
+```
+
+<h2>Git</h2>
+
+Remove all unpushed commits:
+
+```
+git reset --hard origin
+```
+
+Reword last commit message:
+
+```
+git commit --amend -m "<message>"
+```
+
+Squash all commits on a branch:
+
+```
+git checkout <branch>
+
+git reset $(git merge-base master $(git branch --show-current))
+
+git add -A
+
+git commit -m <message>
+
+git push --force
+```
+
+Move unpushed commit from one branch to another:
+
+```
+git reset HEAD~1
+
+git stash
+
+git checkout <branch>
+
+git stash pop
+```
+
+<h2>SVN</h2>
+
+Get latest revision before the new branch was created:
+
+```
+svn log --stop-on-copy --verbose --limit 1 -r0:HEAD <branch-link>
+```
+
+Define a format a file:
+
+```
+svn propset svn:mime-type <format> <path>
 ```

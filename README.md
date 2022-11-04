@@ -71,6 +71,12 @@ Get your IP address:
 ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'
 ```
 
+Inspect HTTP requests to a particular port:
+
+```
+nc -l <port>
+```
+
 <h2>Kubernetes</h2>
 
 Connect to the cluster:

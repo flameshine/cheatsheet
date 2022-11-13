@@ -2,12 +2,19 @@
 
 <h2>Table of contents</h2>
 
+* [Useful links] (#Useful links)
 * [Unix](#Unix)
 * [Kubernetes](#Kubernetes)
 * [Docker](#Docker)
 * [AWS](#AWS)
 * [Git](#Git)
 * [SVN](#SVN)
+
+<h2>Useful links</h2>
+
+AWS policy generator:
+
+https://awspolicygen.s3.amazonaws.com/policygen.html
 
 <h2>Unix</h2>
 

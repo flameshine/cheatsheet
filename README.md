@@ -2,7 +2,7 @@
 
 <h2>Table of contents</h2>
 
-* [Useful links] (#Useful links)
+* [Utilities] (#Utilities)
 * [Unix](#Unix)
 * [Kubernetes](#Kubernetes)
 * [Docker](#Docker)
@@ -10,7 +10,7 @@
 * [Git](#Git)
 * [SVN](#SVN)
 
-<h2>Useful links</h2>
+<h2>Utilities</h2>
 
 AWS policy generator:
 

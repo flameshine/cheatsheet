@@ -2,7 +2,7 @@
 
 <h2>Table of contents</h2>
 
-* [Utilities] (#Utilities)
+* [Utilities](#Utilities)
 * [Unix](#Unix)
 * [Kubernetes](#Kubernetes)
 * [Docker](#Docker)

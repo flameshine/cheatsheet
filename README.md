@@ -12,9 +12,37 @@
 
 <h2>Utilities</h2>
 
+UML diagram builder:
+
+https://app.diagrams.net
+
 AWS policy generator:
 
 https://awspolicygen.s3.amazonaws.com/policygen.html
+
+Unicode converter:
+
+https://www.branah.com/unicode-converter
+
+JSON converter:
+
+https://jsontostring.com
+
+Difference checker:
+
+https://www.diffchecker.com
+
+Character remover:
+
+https://onlinecaseconvert.com/remove-characters-from-text-online.php
+
+Case converter:
+
+https://convertcase.net
+
+Epoch time converter:
+
+https://www.epochconverter.com/
 
 <h2>Unix</h2>
 

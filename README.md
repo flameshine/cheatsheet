@@ -42,7 +42,7 @@ https://convertcase.net
 
 Epoch time converter:
 
-https://www.epochconverter.com/
+https://www.epochconverter.com
 
 <h2>Unix</h2>
 

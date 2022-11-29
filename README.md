@@ -240,7 +240,7 @@ aws2-wrap --profile <profile> aws ecr get-login-password --region us-east-1 | do
 Update EKS cluster config:
 
 ```
-aws eks update-kubeconfig --profile <profile> --region us-east-1 --name <name>
+aws eks update-kubeconfig --profile <profile> --region us-east-1 --name <cluster-name>
 ```
 
 <h2>Docker</h2>

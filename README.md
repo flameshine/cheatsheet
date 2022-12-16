@@ -305,6 +305,12 @@ git checkout <branch>
 git stash pop
 ```
 
+Make a certain branch same as master:
+
+```
+git reset --hard master
+```
+
 <h2>SVN</h2>
 
 Get latest revision before the new branch was created:

@@ -4,6 +4,7 @@
 
 * [Utilities](#Utilities)
 * [Unix](#Unix)
+* [Helm](#Helm)
 * [Kubernetes](#Kubernetes)
 * [Docker](#Docker)
 * [AWS](#AWS)
@@ -94,6 +95,26 @@ Inspect HTTP requests to a particular port:
 
 ```
 nc -l <port>
+```
+
+<h2>Helm</h2>
+
+Update dependencies:
+
+```
+helm dependency update
+```
+
+Build dependencies:
+
+```
+helm dependency build
+```
+
+Generate template:
+
+```
+helm template <path-to-chart> -f <values-to-pass> > ~/template.yaml
 ```
 
 <h2>Kubernetes</h2>

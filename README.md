@@ -97,6 +97,12 @@ Inspect HTTP requests to a particular port:
 nc -l <port>
 ```
 
+Grab nth line of console output:
+
+```
+sed -n 2p
+```
+
 <h2>Helm</h2>
 
 Update dependencies:
@@ -284,6 +290,12 @@ Push an image:
 
 ```
 docker push <name/id>
+```
+
+Remove the last container:
+
+```
+docker ps -a | awk '{print $1}' | sed -n 2p | xargs docker rm
 ```
 
 <h2>Git</h2>

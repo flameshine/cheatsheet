@@ -7,7 +7,7 @@
 * [Helm](#Helm)
 * [Kubernetes](#Kubernetes)
 * [Docker](#Docker)
-* [argo-workflows](#argo-workflows)
+* [Argo Workflows](#Argo Workflows)
 * [AWS](#AWS)
 * [Git](#Git)
 * [SVN](#SVN)
@@ -305,7 +305,7 @@ Remove the last container:
 docker ps -a | awk '{print $1}' | sed -n 2p | xargs docker rm
 ```
 
-<h2>argo-workflows</h2>
+<h2>Argo Workflows</h2>
 
 Submit a template:
 

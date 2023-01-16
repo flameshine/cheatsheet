@@ -319,6 +319,18 @@ Submit a workflow:
 argo -n <namespace> submit <path>
 ```
 
+Delete a template:
+
+```
+argo -n <namespace> template delete template
+```
+
+Delete a workflow:
+
+```
+argo -n <namespace> delete workflow
+```
+
 <h2>Git</h2>
 
 Remove all unpushed commits:

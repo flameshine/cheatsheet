@@ -256,6 +256,12 @@ aws eks update-kubeconfig --profile <profile> --region us-east-1 --name <cluster
 
 <h2>Docker</h2>
 
+Remove all stopped containers, networks not used by at least one container, all images without at least one container and all build cache:
+
+```
+docker system prune -a
+```
+
 List all images:
 
 ```

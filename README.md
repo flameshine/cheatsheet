@@ -7,6 +7,7 @@
 * [Helm](#Helm)
 * [Kubernetes](#Kubernetes)
 * [Docker](#Docker)
+* [argo-workflows](#argo-workflows)
 * [AWS](#AWS)
 * [Git](#Git)
 * [SVN](#SVN)
@@ -302,6 +303,20 @@ Remove the last container:
 
 ```
 docker ps -a | awk '{print $1}' | sed -n 2p | xargs docker rm
+```
+
+<h2>argo-workflows</h2>
+
+Submit a template:
+
+```
+argo -n <namespace> template create <path>
+```
+
+Submit a workflow:
+
+```
+argo -n <namespace> submit <path>
 ```
 
 <h2>Git</h2>

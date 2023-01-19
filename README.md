@@ -322,13 +322,13 @@ argo -n <namespace> submit <path>
 Delete a template:
 
 ```
-argo -n <namespace> template delete template
+argo -n <namespace> template delete template <name>
 ```
 
 Delete a workflow:
 
 ```
-argo -n <namespace> delete workflow
+argo -n <namespace> delete workflow <name>
 ```
 
 <h2>Git</h2>

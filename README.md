@@ -230,25 +230,25 @@ kc -n <namespace> get pods | awk '{print $1}' | grep "<pattern>" | xargs kubectl
 Synthetize CDK changes:
 
 ```
-aws2-wrap --profile <profile> cdk synth
+cdk synth
 ```
 
 Deploy CDK changes:
 
 ```
-aws2-wrap --profile <profile> cdk deploy
+cdk deploy
 ```
 
 Destroy CDK changes:
 
 ```
-aws2-wrap --profile <profile> cdk destroy
+cdk destroy
 ```
 
 Login into ECR:
 
 ```
-aws2-wrap --profile <profile> aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR address>
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR address>
 ```
 
 Update EKS cluster config:

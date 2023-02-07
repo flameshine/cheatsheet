@@ -18,6 +18,8 @@ UML diagram builder: https://app.diagrams.net
 
 AWS policy generator: https://awspolicygen.s3.amazonaws.com/policygen.html
 
+AWS pricing calculator: https://calculator.aws
+
 Unicode converter: https://www.branah.com/unicode-converter
 
 JSON converter: https://jsontostring.com

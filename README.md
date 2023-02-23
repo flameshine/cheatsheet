@@ -154,6 +154,12 @@ Get a specific resource type:
 kc get <resource type> <name>
 ```
 
+List namespace events:
+
+```
+kc -n <namespace> get events
+```
+
 Delete a resource type:
 
 ```
@@ -177,7 +183,6 @@ Enter a specific pod:
 ```
 kc exec --stdin --tty <pod> -- /bin/bash
 ```
-
 
 Execute any command (for instance, view file content) inside a pod:
 

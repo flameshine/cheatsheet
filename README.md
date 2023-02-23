@@ -229,6 +229,8 @@ kc -n <namespace> get pods | awk '{print $1}' | grep "<pattern>" | xargs kubectl
 
 <h2>AWS</h2>
 
+<h3>CDK</h3>
+
 Synthetize CDK changes:
 
 ```
@@ -247,16 +249,28 @@ Destroy CDK changes:
 cdk destroy
 ```
 
+<h3>ECR</h3>
+
 Login into ECR:
 
 ```
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR address>
 ```
 
+<h3>EKS</h3>
+
 Update EKS cluster config:
 
 ```
-aws eks update-kubeconfig --profile <profile> --region us-east-1 --name <cluster-name>
+aws eks update-kubeconfig --profile <profile> --region <region> --name <cluster-name>
+```
+
+<h3>S3</h3>
+
+Get total number of objects in a bucket:
+
+```
+aws s3 ls s3://<bucket> --recursive --summarize | grep "Total Objects:"
 ```
 
 <h2>Docker</h2>

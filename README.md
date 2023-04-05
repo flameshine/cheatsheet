@@ -278,6 +278,20 @@ Get total number of objects in a bucket:
 aws s3 ls s3://<bucket> --recursive --summarize | grep "Total Objects:"
 ```
 
+<h3>Secrets Manager</h3>
+
+Delete a secret immediately:
+
+```
+aws secretsmanager delete-secret --secret-id itinerary-querier/v8-aggregator-credentials --force-delete-without-recovery
+```
+
+List secrets:
+
+```
+aws secretsmanager list-secrets
+```
+
 <h2>Docker</h2>
 
 Remove all stopped containers, networks not used by at least one container, all images without at least one container and all build cache:

@@ -416,6 +416,12 @@ git reset --hard master
 
 <h2>SVN</h2>
 
+Revert all changes:
+
+```
+svn revert -R .
+```
+
 Get latest revision before the new branch was created:
 
 ```

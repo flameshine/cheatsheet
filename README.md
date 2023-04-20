@@ -34,6 +34,8 @@ Epoch time converter: https://www.epochconverter.com
 
 Random number generator: https://www.random.org
 
+TypeScript playground: https://www.typescriptlang.org/play
+
 <h2>Unix</h2>
 
 Grant read/write/execute permissions to a file:

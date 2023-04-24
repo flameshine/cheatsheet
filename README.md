@@ -186,10 +186,10 @@ Enter a specific pod:
 kc exec --stdin --tty <pod> -- /bin/bash
 ```
 
-Execute any command (for instance, view file content) inside a pod:
+Execute a command inside a pod:
 
 ```
-kc -n <namespace> exec <pod> -- cat <path>
+kc -n <namespace> exec <pod> <command>
 ```
 
 Create an ordinary job from a cronjob (server & client Kubernetes versions should be the same):

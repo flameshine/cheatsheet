@@ -216,12 +216,6 @@ Forward pod's requests to a local port:
 kc -n <namespace> port-forward <pod> 8080:80
 ```
 
-Example of selecting Prometheus pods and forwarding their traffic to localhost:
-
-```
-kc -n prometheus port-forward $(kc -n prometheus get pods --selector=app=prometheus,component=server --no-headers -o custom-columns=":metadata.name") 9090:9090
-```
-
 View the exact yaml of some Kubernetes component:
 
 ```

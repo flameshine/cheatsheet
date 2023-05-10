@@ -11,6 +11,7 @@
 * [AWS](#AWS)
 * [Git](#Git)
 * [SVN](#SVN)
+* [git-crypt](#git-crypt)
 
 <h2>Utilities</h2>
 
@@ -428,4 +429,20 @@ Define a format a file:
 
 ```
 svn propset svn:mime-type <format> <path>
+```
+
+<h2>git-crypt</h2>
+
+Incstructions: https://github.com/AGWA/git-crypt/tree/master
+
+Lock repository:
+
+```
+git-crypt lock
+```
+
+Unlock repository:
+
+```
+git-crypt unlock
 ```

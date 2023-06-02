@@ -280,7 +280,7 @@ aws s3 ls s3://<bucket> --recursive --summarize | grep "Total Objects:"
 Delete a secret immediately:
 
 ```
-aws secretsmanager delete-secret --secret-id itinerary-querier/v8-aggregator-credentials --force-delete-without-recovery
+aws secretsmanager delete-secret --secret-id <secret-id> --force-delete-without-recovery
 ```
 
 List secrets:

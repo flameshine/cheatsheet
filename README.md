@@ -37,6 +37,8 @@ Random number generator: https://www.random.org
 
 TypeScript playground: https://www.typescriptlang.org/play
 
+RegEx shaper: https://regexr.com
+
 <h2>Unix</h2>
 
 Grant read/write/execute permissions to a file:

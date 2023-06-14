@@ -3,7 +3,7 @@
 <h2>Table of contents</h2>
 
 * [Utilities](#Utilities)
-* [Unix](#Unix)
+* [Terminal](#Terminal)
 * [Helm](#Helm)
 * [Kubernetes](#Kubernetes)
 * [Docker](#Docker)
@@ -39,7 +39,7 @@ TypeScript playground: https://www.typescriptlang.org/play
 
 RegEx shaper: https://regexr.com
 
-<h2>Unix</h2>
+<h2>Terminal</h2>
 
 Grant read/write/execute permissions to a file:
 

@@ -147,6 +147,12 @@ Connect to a certain namespace of the cluster:
 kcon <cluster> <namespace>
 ```
 
+List contexts:
+
+```
+kc config get-contexts
+```
+
 List resource types:
 
 ```

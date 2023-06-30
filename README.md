@@ -419,6 +419,18 @@ Make a certain branch same as master:
 git reset --hard master
 ```
 
+Cherry-pick commit from another repository:
+
+```
+git remote add other <link>
+
+git fetch other
+
+git cherry-pick <hash>
+
+git remote remove other
+```
+
 <h2>SVN</h2>
 
 Revert all changes:

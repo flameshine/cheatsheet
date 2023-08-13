@@ -5,7 +5,7 @@
 * [Utilities](#Utilities)
 * [Terminal](#Terminal)
 * [Helm](#Helm)
-* [kubernetes](#Kubernetes)
+* [Kubernetes](#kubernetes)
 * [Docker](#Docker)
 * [argo-workflows](#argo-workflows)
 * [AWS](#AWS)

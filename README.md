@@ -5,6 +5,7 @@
 * [Utilities](#Utilities)
 * [Terminal](#Terminal)
 * [Helm](#Helm)
+* [Lerna](#Lerna)
 * [Kubernetes](#Kubernetes)
 * [Docker](#Docker)
 * [argo-workflows](#argo-workflows)
@@ -131,6 +132,20 @@ Generate template:
 
 ```
 helm template <path-to-chart> -f <values-to-pass> > ~/template.yaml
+```
+
+<h2>Lerna</h2>
+
+Clean:
+
+```
+npx lerna clean
+```
+
+Build:
+
+```
+npx lerna run build
 ```
 
 <h2>Kubernetes</h2>

@@ -13,6 +13,7 @@
 * [Git](#Git)
 * [SVN](#SVN)
 * [git-crypt](#git-crypt)
+* [Redis](#Redis)
 
 <h2>Utilities</h2>
 
@@ -468,7 +469,7 @@ svn propset svn:mime-type <format> <path>
 
 <h2>git-crypt</h2>
 
-Incstructions: https://github.com/AGWA/git-crypt/tree/master
+Instructions: https://github.com/AGWA/git-crypt/tree/master
 
 Lock repository:
 
@@ -480,4 +481,12 @@ Unlock repository:
 
 ```
 git-crypt unlock
+```
+
+<h2>Redis</h2>
+
+Get N items matching a pattern:
+
+```
+scan 0 match <pattern> count <count>
 ```

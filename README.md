@@ -447,6 +447,14 @@ git cherry-pick <hash>
 git remote remove other
 ```
 
+Squash certain commit:
+
+```
+git rebase -i master
+
+pick -> squash for the commits you're interested in
+```
+
 <h2>SVN</h2>
 
 Revert all changes:

@@ -275,6 +275,12 @@ Destroy CDK changes:
 cdk destroy
 ```
 
+List stacks:
+
+```
+cdk list
+```
+
 <h3>ECR</h3>
 
 Login into ECR:

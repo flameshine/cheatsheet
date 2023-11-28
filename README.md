@@ -499,6 +499,12 @@ git-crypt unlock
 
 <h2>Redis</h2>
 
+Connect to the cluster:
+
+```
+redis6-cli -c -h <host> -p <port>
+```
+
 Get N items matching a pattern:
 
 ```

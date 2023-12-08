@@ -41,6 +41,8 @@ TypeScript playground: https://www.typescriptlang.org/play
 
 RegEx shaper: https://regexr.com
 
+Character counter: https://charactercalculator.com
+
 <h2>Terminal</h2>
 
 Grant read/write/execute permissions to a file:

@@ -460,7 +460,19 @@ Squash certain commit:
 ```
 git rebase -i master
 
-pick -> squash for the commits you're interested in
+pick -> squash (for the commits you're interested in)
+```
+
+Split a certain commit:
+
+```
+git rebase -i <commit>
+
+pick -> edit (for the commits you're interested in)
+
+git reset HEAD~
+
+git rebase --continue
 ```
 
 <h2>SVN</h2>

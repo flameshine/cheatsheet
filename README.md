@@ -524,3 +524,9 @@ Get N items matching a pattern:
 ```
 scan 0 match <pattern> count <count>
 ```
+
+Get random key:
+
+```
+randomkey
+```

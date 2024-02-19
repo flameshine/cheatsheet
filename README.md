@@ -255,6 +255,12 @@ Apply the corresponding action to each listed pod:
 kc -n <namespace> get pods | awk '{print $1}' | grep "<pattern>" | xargs kubectl -n <namespace> <action> pod
 ```
 
+Scale the deployment:
+
+```
+kc -n <namespace> scale deployment/<deployment> --replicas=<number of replicas>
+```
+
 <h2>AWS</h2>
 
 <h3>CDK</h3>

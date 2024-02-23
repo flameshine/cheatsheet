@@ -536,3 +536,9 @@ Get random key:
 ```
 randomkey
 ```
+
+Flush all data:
+
+```
+flushall
+```

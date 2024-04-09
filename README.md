@@ -2,8 +2,8 @@
 
 <h2>Table of contents</h2>
 
+* [Utilities](#Utilities)
 * [Unix](#Unix)
-* [Terminal](#Terminal)
 * [Helm](#Helm)
 * [Lerna](#Lerna)
 * [Kubernetes](#Kubernetes)

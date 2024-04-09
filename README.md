@@ -2,7 +2,7 @@
 
 <h2>Table of contents</h2>
 
-* [Utilities](#Utilities)
+* [Unix](#Unix)
 * [Terminal](#Terminal)
 * [Helm](#Helm)
 * [Lerna](#Lerna)
@@ -43,7 +43,7 @@ RegEx shaper: https://regexr.com
 
 Character counter: https://charactercalculator.com
 
-<h2>Terminal</h2>
+<h2>Unix</h2>
 
 Grant read/write/execute permissions to a file:
 
@@ -115,6 +115,12 @@ Grab nth line of console output:
 
 ```
 sed -n 2p
+```
+
+Replace all occurrences of a string in a file:
+
+```
+find . -name "<pattern>" -print0 | xargs -0 sed -i "" 's/<old>/<new>/g'
 ```
 
 <h2>Helm</h2>

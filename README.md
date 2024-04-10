@@ -117,7 +117,7 @@ Grab nth line of console output:
 sed -n 2p
 ```
 
-Replace all occurrences of a string in a file:
+Find file and replace all occurrences of a string inside:
 
 ```
 find . -name "<pattern>" -print0 | xargs -0 sed -i "" 's/<old>/<new>/g'

@@ -565,6 +565,12 @@ Build:
 ./gradlew build
 ```
 
+Build refreshing dependencies:
+
+```
+./gradlew build --refresh-dependencies
+```
+
 <h2>Maven</h2>
 
 Clean:

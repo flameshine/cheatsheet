@@ -14,6 +14,8 @@
 * [SVN](#SVN)
 * [git-crypt](#git-crypt)
 * [Redis](#Redis)
+* [Gradle](#Gradle)
+* [Maven](#Maven)
 
 <h2>Utilities</h2>
 
@@ -547,4 +549,38 @@ Flush all data:
 
 ```
 flushall
+```
+
+<h2>Gradle</h2>
+
+Clean:
+
+```
+./gradlew clean
+```
+
+Build:
+
+```
+./gradlew build
+```
+
+<h2>Maven</h2>
+
+Clean:
+
+```
+mvn clean
+```
+
+Install project artifacts into a repository:
+
+```
+mvn install
+```
+
+Build:
+
+```
+mvn compile
 ```

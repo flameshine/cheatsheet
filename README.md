@@ -8,14 +8,15 @@
 * [Lerna](#Lerna)
 * [Kubernetes](#Kubernetes)
 * [Docker](#Docker)
-* [argo-workflows](#argo-workflows)
 * [AWS](#AWS)
+* [Redis](#Redis)
+* [argo-workflows](#argo-workflows)
 * [Git](#Git)
 * [SVN](#SVN)
 * [git-crypt](#git-crypt)
-* [Redis](#Redis)
 * [Gradle](#Gradle)
 * [Maven](#Maven)
+* [Python](#Python)
 
 <h2>Utilities</h2>
 
@@ -269,6 +270,56 @@ Scale the deployment:
 kc -n <namespace> scale deployment/<deployment> --replicas=<number of replicas>
 ```
 
+<h2>Docker</h2>
+
+Remove all stopped containers, networks not used by at least one container, all images without at least one container and all build cache:
+
+```
+docker system prune -a
+```
+
+List all images:
+
+```
+docker images
+```
+
+Remove an image:
+
+```
+docker image rm <name/id>
+```
+
+List all containers:
+
+```
+docker ps -a
+```
+
+Remove a container:
+
+```
+docker container rm <name/id>
+```
+
+Build an image:
+
+```
+docker build (-t <tag>) <path>
+```
+
+Push an image:
+
+```
+docker push <name/id>
+```
+
+Remove the last container:
+
+```
+docker ps -a | awk '{print $1}' | sed -n 2p | xargs docker rm
+```
+
 <h2>AWS</h2>
 
 <h3>CDK</h3>
@@ -335,54 +386,30 @@ List secrets:
 aws secretsmanager list-secrets
 ```
 
-<h2>Docker</h2>
+<h2>Redis</h2>
 
-Remove all stopped containers, networks not used by at least one container, all images without at least one container and all build cache:
-
-```
-docker system prune -a
-```
-
-List all images:
+Connect to the cluster:
 
 ```
-docker images
+redis6-cli -c -h <host> -p <port>
 ```
 
-Remove an image:
+Get N items matching a pattern:
 
 ```
-docker image rm <name/id>
+scan 0 match <pattern> count <count>
 ```
 
-List all containers:
+Get random key:
 
 ```
-docker ps -a
+randomkey
 ```
 
-Remove a container:
+Flush all data:
 
 ```
-docker container rm <name/id>
-```
-
-Build an image:
-
-```
-docker build (-t <tag>) <path>
-```
-
-Push an image:
-
-```
-docker push <name/id>
-```
-
-Remove the last container:
-
-```
-docker ps -a | awk '{print $1}' | sed -n 2p | xargs docker rm
+flushall
 ```
 
 <h2>argo-workflows</h2>
@@ -525,32 +552,6 @@ Unlock repository:
 git-crypt unlock
 ```
 
-<h2>Redis</h2>
-
-Connect to the cluster:
-
-```
-redis6-cli -c -h <host> -p <port>
-```
-
-Get N items matching a pattern:
-
-```
-scan 0 match <pattern> count <count>
-```
-
-Get random key:
-
-```
-randomkey
-```
-
-Flush all data:
-
-```
-flushall
-```
-
 <h2>Gradle</h2>
 
 Clean:
@@ -589,4 +590,58 @@ Build:
 
 ```
 mvn compile
+```
+
+<h2>Python</h2>
+
+<h3>pyenv</h3>
+
+List available for installation versions:
+
+```
+pyenv install --list
+```
+
+Install a version:
+
+```
+pyenv install <name>
+```
+
+Create a virtual environment:
+
+```
+pyenv virtualenv <version> <name>
+```
+
+List virtual environments:
+
+```
+pyenv virtualenvs
+```
+
+Activate an environment:
+
+```
+pyenv activate <name>
+```
+
+Deactivate an environment:
+
+```
+pyenv deactivate
+```
+
+Uninstall an environment:
+
+```
+pyenv uninstall <name>
+```
+
+<h3>pip</h3>
+
+Install a module:
+
+```
+pip install <name>
 ```

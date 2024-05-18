@@ -13,6 +13,7 @@
   * [ECR](#ECR)
   * [EKS](#EKS)
   * [S3](#S3)
+  * [Secrets](#Secrets)
 * [Redis](#Redis)
 * [argo-workflows](#argo-workflows)
 * [Git](#Git)
@@ -378,7 +379,7 @@ Get total number of objects in a bucket:
 aws s3 ls s3://<bucket> --recursive --summarize | grep "Total Objects:"
 ```
 
-<h3>Secrets Manager</h3>
+<h3>Secrets</h3>
 
 Delete a secret immediately:
 

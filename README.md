@@ -17,6 +17,8 @@
 * [Gradle](#Gradle)
 * [Maven](#Maven)
 * [Python](#Python)
+  * [pyenv](#pyenv)
+  * [pip](#pip)
 
 <h2>Utilities</h2>
 

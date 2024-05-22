@@ -133,6 +133,12 @@ Find file and replace all occurrences of a string inside:
 find . -name "<pattern>" -print0 | xargs -0 sed -i "" 's/<old>/<new>/g'
 ```
 
+Check if the SSH connection is authorized:
+
+```
+ssh -p 7999 <host> -v
+```
+
 <h2>Helm</h2>
 
 Update dependencies:

@@ -94,7 +94,7 @@ find . -name \*.gz -print0 | xargs -0 zgrep "<pattern>"
 Generate a random string:
 
 ```
-< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c32
+LC_ALL=C < /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c32
 ```
 
 Encode a string with Base64:

@@ -605,6 +605,12 @@ Build:
 mvn compile
 ```
 
+Clean, build and refresh all dependencies:
+
+```
+mvn clean install -U
+```
+
 <h2>Python</h2>
 
 <h3>pyenv</h3>

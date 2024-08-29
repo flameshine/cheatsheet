@@ -562,7 +562,7 @@ git-crypt lock
 Unlock repository:
 
 ```
-git-crypt unlock
+git-crypt unlock <key path>
 ```
 
 <h2>Gradle</h2>

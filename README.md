@@ -497,6 +497,12 @@ Make a certain branch same as master:
 git reset --hard master
 ```
 
+Revert particular file:
+
+```
+git checkout HEAD^ <path>
+```
+
 Cherry-pick commit from another repository:
 
 ```

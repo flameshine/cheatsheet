@@ -139,6 +139,12 @@ Check if the SSH connection is authorized:
 ssh -p 7999 <host> -v
 ```
 
+Generate timestamp:
+
+```
+date +%s
+```
+
 <h2>Helm</h2>
 
 Update dependencies:

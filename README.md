@@ -605,13 +605,19 @@ Clean:
 mvn clean
 ```
 
-Install project artifacts into a repository:
+Build the project:
 
 ```
 mvn install
 ```
 
-Build:
+Build, but faster:
+
+```
+mvn clean install -DskipTests -T4
+```
+
+Compile:
 
 ```
 mvn compile

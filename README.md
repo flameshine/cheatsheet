@@ -629,6 +629,12 @@ Clean, build and refresh all dependencies:
 mvn clean install -U
 ```
 
+Display dependency tree:
+
+```
+mvn dependency:tree
+```
+
 <h2>Python</h2>
 
 <h3>pyenv</h3>

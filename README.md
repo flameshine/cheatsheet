@@ -76,7 +76,7 @@ sudo kill -9 $(lsof -t -i:<port>)
 Check what is running on the port:
 
 ```
-netstat -tulpn | grep <port>
+lsof -i -P | grep "LISTEN" | grep:<port>
 ```
 
 Get SSL certificate data:

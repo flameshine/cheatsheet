@@ -145,6 +145,12 @@ Generate timestamp:
 date +%s
 ```
 
+Archive applying a passcode:
+
+```
+zip -er <archive-name> <archive-target>
+```
+
 <h2>Helm</h2>
 
 Update dependencies:

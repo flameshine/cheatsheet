@@ -171,7 +171,7 @@ Generate template:
 helm template <path-to-chart> -f <values-to-pass> > ~/template.yaml
 ```
 
-<h2>Lerna</h2>
+<h2><a href="https://lerna.js.org/">Lerna<a/></h2>
 
 Clean:
 
@@ -185,7 +185,7 @@ Build:
 npx lerna run build
 ```
 
-<h2>Kubernetes</h2>
+<h2><a href="https://kubernetes.io/">Kubernetes<a/></h2>
 
 Connect to the cluster:
 
@@ -295,7 +295,7 @@ Scale the deployment:
 kc -n <namespace> scale deployment/<deployment> --replicas=<number of replicas>
 ```
 
-<h2>Docker</h2>
+<h2><a href="https://www.docker.com/">Docker<a/></h2>
 
 Remove all stopped containers, networks not used by at least one container, all images without at least one container and all build cache:
 
@@ -345,9 +345,9 @@ Remove the last container:
 docker ps -a | awk '{print $1}' | sed -n 2p | xargs docker rm
 ```
 
-<h2>AWS</h2>
+<h2><a href="https://aws.amazon.com">AWS</a></h2>
 
-<h3>CDK</h3>
+<h3><a href="https://docs.aws.amazon.com/cdk/v2/guide/home.html">CDK</a></h3>
 
 Synthetize CDK changes:
 
@@ -373,7 +373,7 @@ List stacks:
 cdk list
 ```
 
-<h3>ECR</h3>
+<h3><a href="https://aws.amazon.com/en/ecr">ECR</a></h3>
 
 Login into ECR:
 
@@ -381,7 +381,7 @@ Login into ECR:
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR address>
 ```
 
-<h3>EKS</h3>
+<h3><a href="https://aws.amazon.com/en/eks">EKS</a></h3>
 
 Update EKS cluster config:
 
@@ -389,15 +389,15 @@ Update EKS cluster config:
 aws eks update-kubeconfig --profile <profile> --region <region> --name <cluster-name>
 ```
 
-<h3>S3</h3>
+<h3><a href="https://aws.amazon.com/en/s3">S3</a></h3>
 
-Get total number of objects in a bucket:
+Get the total number of objects in a bucket:
 
 ```
 aws s3 ls s3://<bucket> --recursive --summarize | grep "Total Objects:"
 ```
 
-<h3>Secrets</h3>
+<h3><a href="https://aws.amazon.com/en/secrets-manager">Secrets Manager</a></h3>
 
 Delete a secret immediately:
 
@@ -411,7 +411,7 @@ List secrets:
 aws secretsmanager list-secrets
 ```
 
-<h2>Redis</h2>
+<h2><a href="https://redis.io">Redis</a></h2>
 
 Connect to the cluster:
 
@@ -437,7 +437,7 @@ Flush all data:
 flushall
 ```
 
-<h2>argo-workflows</h2>
+<h2><a href="https://argoproj.github.io/workflows">argo-workflows</a></h2>
 
 Submit a template:
 
@@ -463,7 +463,7 @@ Delete a workflow:
 argo -n <namespace> delete workflow <name>
 ```
 
-<h2>Git</h2>
+<h2><a href="https://git-scm.com">Git</a></h2>
 
 Remove all unpushed commits:
 
@@ -547,7 +547,7 @@ git reset HEAD~
 git rebase --continue
 ```
 
-<h2>SVN</h2>
+<h2><a href="https://subversion.apache.org">SVN</a></h2>
 
 Revert all changes:
 
@@ -567,7 +567,7 @@ Define a format a file:
 svn propset svn:mime-type <format> <path>
 ```
 
-<h2>git-crypt</h2>
+<h2><a href="https://github.com/AGWA/git-crypt">git-crypt</a></h2>
 
 Instructions: https://github.com/AGWA/git-crypt/tree/master
 
@@ -641,7 +641,7 @@ Display dependency tree:
 mvn dependency:tree
 ```
 
-<h2>Python</h2>
+<h2><a href="https://www.python.org">Python</a></h2>
 
 <h3>pyenv</h3>
 

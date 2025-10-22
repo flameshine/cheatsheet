@@ -151,7 +151,7 @@ Archive applying a passcode:
 zip -er <archive-name> <archive-target>
 ```
 
-<h2>Helm</h2>
+<h2><a href="https://helm.sh/">Helm<a/></h2>
 
 Update dependencies:
 

@@ -151,6 +151,18 @@ Archive applying a passcode:
 zip -er <archive-name> <archive-target>
 ```
 
+Add space to the volume (example):
+
+```
+sudo vgdisplay rootvg
+
+sudo growpart /dev/nvme0n1 3
+
+sudo lvextend -L +2G /dev/mapper/rootvg-usrlv
+
+sudo xfs_growfs /usr
+```
+
 <h2><a href="https://helm.sh/">Helm<a/></h2>
 
 Update dependencies:

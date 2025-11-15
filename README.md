@@ -657,7 +657,9 @@ mvn dependency:tree
 
 Start an HTTP server:
 
+```
 python3 -m http.server <port>
+```
 
 <h3>pyenv</h3>
 

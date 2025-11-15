@@ -655,6 +655,10 @@ mvn dependency:tree
 
 <h2><a href="https://www.python.org">Python</a></h2>
 
+Start an HTTP server:
+
+python3 -m http.server <port>
+
 <h3>pyenv</h3>
 
 List available for installation versions:

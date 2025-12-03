@@ -559,6 +559,12 @@ git reset HEAD~
 git rebase --continue
 ```
 
+Save changes from a range of commits for a single file into a patch:
+
+```
+git diff HEAD~3 HEAD~1 -- path/to/file.ext > changes.patch
+```
+
 <h2><a href="https://subversion.apache.org">SVN</a></h2>
 
 Revert all changes:
@@ -567,7 +573,7 @@ Revert all changes:
 svn revert -R .
 ```
 
-Get latest revision before the new branch was created:
+Get the latest revision before the new branch was created:
 
 ```
 svn log --stop-on-copy --verbose --limit 1 -r0:HEAD <branch-link>

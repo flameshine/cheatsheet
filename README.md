@@ -5,11 +5,9 @@
 * [Utilities](#Utilities)
 * [Unix](#Unix)
 * [Helm](#Helm)
-* [Lerna](#Lerna)
 * [Kubernetes](#Kubernetes)
 * [Docker](#Docker)
 * [AWS](#AWS)
-  * [CDK](#CDK)
   * [ECR](#ECR)
   * [EKS](#EKS)
   * [S3](#S3)
@@ -22,44 +20,36 @@
 * [Gradle](#Gradle)
 * [Maven](#Maven)
 * [Python](#Python)
-  * [pyenv](#pyenv)
-  * [pip](#pip)
 
 <h2>Utilities</h2>
 
-UML diagram builder: https://app.diagrams.net
+UML Diagram Builder: https://app.diagrams.net
 
-AWS policy generator: https://awspolicygen.s3.amazonaws.com/policygen.html
+AWS Policy Generator: https://awspolicygen.s3.amazonaws.com/policygen.html
 
-AWS pricing calculator: https://calculator.aws
+AWS Pricing Calculator: https://calculator.aws
 
-Unicode converter: https://www.branah.com/unicode-converter
+Unicode Converter: https://www.branah.com/unicode-converter
 
-JSON converter: https://jsontostring.com
+JSON Converter: https://jsontostring.com
 
-Difference checker: https://www.diffchecker.com
+Difference Checker: https://www.diffchecker.com
 
-Character remover: https://onlinecaseconvert.com/remove-characters-from-text-online.php
+Epoch Time Converter: https://www.epochconverter.com
 
-Case converter: https://convertcase.net
+Random Number Generator: https://www.random.org
 
-Epoch time converter: https://www.epochconverter.com
+TypeScript Playground: https://www.typescriptlang.org/play
 
-Random number generator: https://www.random.org
+RegEx Shaper: https://regexr.com
 
-TypeScript playground: https://www.typescriptlang.org/play
+Character Remover: https://onlinecaseconvert.com/remove-characters-from-text-online.php
 
-RegEx shaper: https://regexr.com
+Case Converter: https://convertcase.net
 
-Character counter: https://charactercalculator.com
+Character Counter: https://charactercalculator.com
 
 <h2>Unix</h2>
-
-Grant read/write/execute permissions to a file:
-
-```
-sudo chmod 775 <target>
-```
 
 Change group permission of a file:
 
@@ -115,34 +105,10 @@ Get your IP address:
 ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'
 ```
 
-Inspect HTTP requests to a particular port:
-
-```
-nc -l <port>
-```
-
-Grab nth line of console output:
-
-```
-sed -n 2p
-```
-
 Find file and replace all occurrences of a string inside:
 
 ```
 find . -name "<pattern>" -print0 | xargs -0 sed -i "" 's/<old>/<new>/g'
-```
-
-Check if the SSH connection is authorized:
-
-```
-ssh -p 7999 <host> -v
-```
-
-Generate timestamp:
-
-```
-date +%s
 ```
 
 Archive applying a passcode:
@@ -151,7 +117,7 @@ Archive applying a passcode:
 zip -er <archive-name> <archive-target>
 ```
 
-Add space to the volume (example):
+Add space to the volume:
 
 ```
 sudo vgdisplay rootvg
@@ -163,19 +129,7 @@ sudo lvextend -L +2G /dev/mapper/rootvg-usrlv
 sudo xfs_growfs /usr
 ```
 
-<h2><a href="https://helm.sh/">Helm<a/></h2>
-
-Update dependencies:
-
-```
-helm dependency update
-```
-
-Build dependencies:
-
-```
-helm dependency build
-```
+<h2><a href="https://helm.sh/">Helm</a></h2>
 
 Generate template:
 
@@ -183,74 +137,12 @@ Generate template:
 helm template <path-to-chart> -f <values-to-pass> > ~/template.yaml
 ```
 
-<h2><a href="https://lerna.js.org/">Lerna<a/></h2>
-
-Clean:
-
-```
-npx lerna clean
-```
-
-Build:
-
-```
-npx lerna run build
-```
-
-<h2><a href="https://kubernetes.io/">Kubernetes<a/></h2>
-
-Connect to the cluster:
-
-```
-kcon <cluster>
-```
-
-Connect to a certain namespace of the cluster:
-
-```
-kcon <cluster> <namespace>
-```
-
-List contexts:
-
-```
-kc config get-contexts
-```
-
-List resource types:
-
-```
-kc get <resource type>
-```
-
-Get a specific resource type:
-
-```
-kc get <resource type> <name>
-```
+<h2><a href="https://kubernetes.io/">Kubernetes</a></h2>
 
 List namespace events:
 
 ```
 kc -n <namespace> get events
-```
-
-Delete a resource type:
-
-```
-kc delete <resource type> <name>
-```
-
-Describe a resource type:
-
-```
-kc describe <resource type> <name>
-```
-
-Apply a manifest:
-
-```
-kc apply -f <path>
 ```
 
 Enter a specific pod:
@@ -265,16 +157,10 @@ Execute a command inside a pod:
 kc -n <namespace> exec <pod> <command>
 ```
 
-Create an ordinary job from a cronjob (server & client Kubernetes versions should be the same):
+Create an ordinary job from a cronjob:
 
 ```
 kc create job --from=cronjob/<cronjob> <name>
-```
-
-Check pod's logs:
-
-```
-kc logs <pod>
 ```
 
 Get resource YAML definition:
@@ -307,7 +193,7 @@ Scale the deployment:
 kc -n <namespace> scale deployment/<deployment> --replicas=<number of replicas>
 ```
 
-<h2><a href="https://www.docker.com/">Docker<a/></h2>
+<h2><a href="https://www.docker.com/">Docker</a></h2>
 
 Remove all stopped containers, networks not used by at least one container, all images without at least one container and all build cache:
 
@@ -315,40 +201,10 @@ Remove all stopped containers, networks not used by at least one container, all 
 docker system prune -a
 ```
 
-List all images:
+Build an image with tag:
 
 ```
-docker images
-```
-
-Remove an image:
-
-```
-docker image rm <name/id>
-```
-
-List all containers:
-
-```
-docker ps -a
-```
-
-Remove a container:
-
-```
-docker container rm <name/id>
-```
-
-Build an image:
-
-```
-docker build (-t <tag>) <path>
-```
-
-Push an image:
-
-```
-docker push <name/id>
+docker build -t <tag> <path>
 ```
 
 Remove the last container:
@@ -358,32 +214,6 @@ docker ps -a | awk '{print $1}' | sed -n 2p | xargs docker rm
 ```
 
 <h2><a href="https://aws.amazon.com">AWS</a></h2>
-
-<h3><a href="https://docs.aws.amazon.com/cdk/v2/guide/home.html">CDK</a></h3>
-
-Synthetize CDK changes:
-
-```
-cdk synth
-```
-
-Deploy CDK changes:
-
-```
-cdk deploy
-```
-
-Destroy CDK changes:
-
-```
-cdk destroy
-```
-
-List stacks:
-
-```
-cdk list
-```
 
 <h3><a href="https://aws.amazon.com/en/ecr">ECR</a></h3>
 
@@ -417,12 +247,6 @@ Delete a secret immediately:
 aws secretsmanager delete-secret --secret-id <secret-id> --force-delete-without-recovery
 ```
 
-List secrets:
-
-```
-aws secretsmanager list-secrets
-```
-
 <h2><a href="https://redis.io">Redis</a></h2>
 
 Connect to the cluster:
@@ -435,18 +259,6 @@ Get N items matching a pattern:
 
 ```
 scan 0 match <pattern> count <count>
-```
-
-Get random key:
-
-```
-randomkey
-```
-
-Flush all data:
-
-```
-flushall
 ```
 
 <h2><a href="https://argoproj.github.io/workflows">argo-workflows</a></h2>
@@ -477,16 +289,10 @@ argo -n <namespace> delete workflow <name>
 
 <h2><a href="https://git-scm.com">Git</a></h2>
 
-Remove all unpushed commits:
+Reset the branch:
 
 ```
 git reset --hard origin
-```
-
-Reword last commit message:
-
-```
-git commit --amend -m "<message>"
 ```
 
 Squash all commits on a branch:
@@ -513,12 +319,6 @@ git stash
 git checkout <branch>
 
 git stash pop
-```
-
-Make a certain branch same as master:
-
-```
-git reset --hard master
 ```
 
 Revert particular file:
@@ -567,12 +367,6 @@ git diff HEAD~3 HEAD~1 -- path/to/file.ext > changes.patch
 
 <h2><a href="https://subversion.apache.org">SVN</a></h2>
 
-Revert all changes:
-
-```
-svn revert -R .
-```
-
 Get the latest revision before the new branch was created:
 
 ```
@@ -603,18 +397,6 @@ git-crypt unlock <key path>
 
 <h2>Gradle</h2>
 
-Clean:
-
-```
-./gradlew clean
-```
-
-Build:
-
-```
-./gradlew build
-```
-
 Build refreshing dependencies:
 
 ```
@@ -622,30 +404,6 @@ Build refreshing dependencies:
 ```
 
 <h2>Maven</h2>
-
-Clean:
-
-```
-mvn clean
-```
-
-Build the project:
-
-```
-mvn install
-```
-
-Build, but faster:
-
-```
-mvn clean install -DskipTests -T4
-```
-
-Compile:
-
-```
-mvn compile
-```
 
 Clean, build and refresh all dependencies:
 
@@ -665,56 +423,4 @@ Start an HTTP server:
 
 ```
 python3 -m http.server <port>
-```
-
-<h3>pyenv</h3>
-
-List available for installation versions:
-
-```
-pyenv install --list
-```
-
-Install a version:
-
-```
-pyenv install <name>
-```
-
-Create a virtual environment:
-
-```
-pyenv virtualenv <version> <name>
-```
-
-List virtual environments:
-
-```
-pyenv virtualenvs
-```
-
-Activate an environment:
-
-```
-pyenv activate <name>
-```
-
-Deactivate an environment:
-
-```
-pyenv deactivate
-```
-
-Uninstall an environment:
-
-```
-pyenv uninstall <name>
-```
-
-<h3>pip</h3>
-
-Install a module:
-
-```
-pip install <name>
 ```
